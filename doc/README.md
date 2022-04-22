@@ -33,6 +33,14 @@ admin
 sudo docker stop ldap-admin
 sudo docker rm ldap-admin
 
+cd docker
+sudo docker-compose up
+sudo docker-compose up -d
+
+sudo docker-compose up ldap-admin
+sudo docker-compose up -d ldap-admin
+sudo docker-compose stop ldap-admin
+
 sudo docker push yiluxiangbei/ldap-admin:v1
 
 docker rmi `docker images | grep none | awk '{print $3}'`
