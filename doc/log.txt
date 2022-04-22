@@ -4,3 +4,138 @@ E: Unable to locate package tk8.5-dev
 E: Couldn't find any package by glob 'tk8.5-dev'
 E: Couldn't find any package by regex 'tk8.5-dev'
 E: Unable to locate package sqlite
+
+.tables
+auth_group                        navis_navi_users
+auth_group_permissions            perms_navipermission
+auth_permission                   perms_navipermission_user_groups
+captcha_captchastore              perms_navipermission_users
+django_content_type               settings
+django_migrations                 users_accesskey
+django_session                    users_loginlog
+likes_likecount                   users_privatetoken
+likes_likerecord                  users_user
+likes_viewcount                   users_user_groups
+likes_viewrecord                  users_user_user_permissions
+navis_navi                        users_usergroup
+navis_navi_groups
+
+select * from auth_permission;
+1|1|add_user|Can add User
+2|1|change_user|Can change User
+3|1|delete_user|Can delete User
+4|2|add_accesskey|Can add access key
+5|2|change_accesskey|Can change access key
+6|2|delete_accesskey|Can delete access key
+7|3|add_loginlog|Can add login log
+8|3|change_loginlog|Can change login log
+9|3|delete_loginlog|Can delete login log
+10|4|add_privatetoken|Can add Private Token
+11|4|change_privatetoken|Can change Private Token
+12|4|delete_privatetoken|Can delete Private Token
+13|5|add_usergroup|Can add User group
+14|5|change_usergroup|Can change User group
+15|5|delete_usergroup|Can delete User group
+16|6|add_navipermission|Can add Navi permission
+17|6|change_navipermission|Can change Navi permission
+18|6|delete_navipermission|Can delete Navi permission
+19|7|add_setting|Can add setting
+20|7|change_setting|Can change setting
+21|7|delete_setting|Can delete setting
+22|8|add_navi|Can add navi
+23|8|change_navi|Can change navi
+24|8|delete_navi|Can delete navi
+25|9|add_likecount|Can add like count
+26|9|change_likecount|Can change like count
+27|9|delete_likecount|Can delete like count
+28|10|add_likerecord|Can add like record
+29|10|change_likerecord|Can change like record
+30|10|delete_likerecord|Can delete like record
+31|11|add_viewcount|Can add view count
+32|11|change_viewcount|Can change view count
+33|11|delete_viewcount|Can delete view count
+34|12|add_viewrecord|Can add view record
+35|12|change_viewrecord|Can change view record
+36|12|delete_viewrecord|Can delete view record
+37|13|add_captchastore|Can add captcha store
+38|13|change_captchastore|Can change captcha store
+39|13|delete_captchastore|Can delete captcha store
+40|14|add_permission|Can add permission
+41|14|change_permission|Can change permission
+42|14|delete_permission|Can delete permission
+43|15|add_group|Can add group
+44|15|change_group|Can change group
+45|15|delete_group|Can delete group
+46|16|add_contenttype|Can add content type
+47|16|change_contenttype|Can change content type
+48|16|delete_contenttype|Can delete content type
+49|17|add_session|Can add session
+50|17|change_session|Can change session
+51|17|delete_session|Can delete session
+
+select * from django_content_type;
+15|auth|group
+14|auth|permission
+13|captcha|captchastore
+7|common|setting
+16|contenttypes|contenttype
+9|likes|likecount
+10|likes|likerecord
+11|likes|viewcount
+12|likes|viewrecord
+8|navis|navi
+6|perms|navipermission
+17|sessions|session
+2|users|accesskey
+3|users|loginlog
+4|users|privatetoken
+1|users|user
+5|users|usergroup
+
+select * from django_migrations;
+1|contenttypes|0001_initial|2022-04-22 11:05:54.423707
+2|contenttypes|0002_remove_content_type_name|2022-04-22 11:05:54.442484
+3|auth|0001_initial|2022-04-22 11:05:54.464235
+4|auth|0002_alter_permission_name_max_length|2022-04-22 11:05:54.480289
+5|auth|0003_alter_user_email_max_length|2022-04-22 11:05:54.491287
+6|auth|0004_alter_user_username_opts|2022-04-22 11:05:54.502578
+7|auth|0005_alter_user_last_login_null|2022-04-22 11:05:54.512050
+8|auth|0006_require_contenttypes_0002|2022-04-22 11:05:54.517101
+9|auth|0007_alter_validators_add_error_messages|2022-04-22 11:05:54.525577
+10|auth|0008_alter_user_username_max_length|2022-04-22 11:05:54.533902
+11|captcha|0001_initial|2022-04-22 11:05:54.547251
+12|common|0001_initial|2022-04-22 11:05:54.564189
+13|users|0001_initial|2022-04-22 11:05:54.607234
+14|likes|0001_initial|2022-04-22 11:05:54.647388
+15|likes|0002_auto_20220422_1820|2022-04-22 11:05:54.683448
+16|navis|0001_initial|2022-04-22 11:05:54.697543
+17|navis|0002_auto_20220422_1820|2022-04-22 11:05:54.732085
+18|perms|0001_initial|2022-04-22 11:05:54.764323
+19|perms|0002_auto_20220422_1820|2022-04-22 11:05:54.806420
+20|sessions|0001_initial|2022-04-22 11:05:54.821267
+
+select * from django_session;
+9w4idh2wk607f0dvtqypn4jnj1shdh2t|ZjQ2NzIzYzg1MDM1OWE1NGQ1ZDk5YmQ5MTFhZDBmYmI4ZTc0MTU0ZDp7InRlc3Rjb29raWUiOiJ3b3JrZWQiLCJfYXV0aF91c2VyX2lkIjoiNjFjMzljMWYtNWI1Ny00MjY4LTgxODAtYjZkZGEyMzVhYWRkIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5OTQzY2RlMzA3MmZiYjhmY2QxZTNlNWM3MTdhOWIyZDE1Y2Y4ZjI0In0=|2022-04-23 11:09:26.926761
+
+select * from settings;
+1|AUTH_LDAP_SERVER_URI|"ldap://172.21.16.11:389"|default|1|
+2|AUTH_LDAP_BIND_DN|"cn=admin,dc=7otech,dc=com"|default|1|
+3|AUTH_LDAP_SEARCH_OU|"ou=tech,dc=7otech,dc=com"|default|1|
+4|AUTH_LDAP_SEARCH_FILTER|"(cn=%(user)s)"|default|1|
+5|AUTH_LDAP_USER_ATTR_MAP|{"username": "cn", "name": "sn", "email": "mail"}|default|1|
+6|AUTH_LDAP_START_TLS|false|default|1|
+7|AUTH_LDAP|true|default|1|
+
+select * from users_loginlog;
+328c7d0f214d46658c7bf3063718530e|admin|ST|127.0.0.1|Unknown||2017-12-12 08:10:28.973000
+a72fa02e3b2c40a08cb10c2f98d8f248|admin|ST|127.0.0.1|Unknown||2017-12-12 08:10:28.980000
+f88d91875d8c46a79a4f03e0f9c0273d|admin|W|59.108.166.39|Unknown|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36|2022-04-22 11:09:26.909355
+
+select * from users_user;
+pbkdf2_sha256$36000$yhYWUEo4DNqj$SpxtdIOm9nwRG+X76jUUlGvdDcLaMBl7Z+rJ8sfSMcU=|2022-04-22 11:09:16.890291|||1|2017-12-12 08:13:20.827000|61c39c1f5b5742688180b6dda235aadd|admin|Administrator|admin@jumpserver.org|Admin||||0||||Administrator is the super user of system|0|0|2087-11-25 08:13:20.827000|System
+
+select * from users_user_groups;
+1|61c39c1f5b5742688180b6dda235aadd|f3c6b02159a943e7b022c2e9bfac84d7
+
+select * from users_usergroup;
+0||f3c6b02159a943e7b022c2e9bfac84d7|Default|Default user group|2017-12-12 08:13:20.906000|System
