@@ -41,6 +41,8 @@ sudo docker-compose up ldap-admin
 sudo docker-compose up -d ldap-admin
 sudo docker-compose stop ldap-admin
 
+sudo docker exec -it ldap-admin-fe bash
+
 sudo docker push yiluxiangbei/ldap-admin:v1
 
 docker rmi `docker images | grep none | awk '{print $3}'`
