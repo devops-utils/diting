@@ -163,3 +163,5 @@ ldap-admin-fe |     response = handler(request, *args, **kwargs)
 ldap-admin-fe |   File "/ldap-admin/apps/users/api.py", line 116, in get
 ldap-admin-fe |     ok = conn.search(search_ou, search_filter % ({"user": "*"}),
 ldap-admin-fe | TypeError: unsupported operand type(s) for %: 'NoneType' and 'dict'
+
+DataTables warning: table id=user_list_table - Requested unknown parameter 'phone' for row 0, column 4. For more information about this error, please see http://datatables.net/tn/4
