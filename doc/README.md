@@ -5,6 +5,8 @@ redis-cli
 
 sudo yum install python3-devel
 
+sudo docker run -it --rm python:3.6 bash
+
 sudo docker build -t yiluxiangbei/ldap-admin:v1 . 
 sudo docker run -it yiluxiangbei/ldap-admin:v1 bash
 
