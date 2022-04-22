@@ -91,6 +91,8 @@ apt-get update
 
 https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.310d1b11sBNEzg
 lsb_release -a
+
+https://datatables.net/download
 ```
 
 ```
