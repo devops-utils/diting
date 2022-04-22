@@ -12,7 +12,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted univer
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse \
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse \
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse \
-EOF \
+EOF
 RUN apt-get update
 # RUN sudo apt-get install aptitude -y
 # RUN sudo aptitude install python-dev -y
