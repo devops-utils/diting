@@ -51,4 +51,4 @@ docs/.DS_Store
 docs/_static/.DS_Store
 docs/_static/img/.DS_Store
 
-docker/config.py
+docker/*config.py

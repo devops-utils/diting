@@ -17,7 +17,10 @@ services:
       MYSQL_ROOT_PASSWORD: ldap123456
     restart: always
   ldap-admin:
-    image: yiluxiangbei/ldap-admin:v1
+    # image: yiluxiangbei/ldap-admin:v1
+    build:
+      context: ldap-fe
+      dockerfile: Dockerfile
     container_name: ldap-admin-fe
     ports:
       - "8072:8080"
