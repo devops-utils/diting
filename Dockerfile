@@ -19,7 +19,7 @@ RUN cd utils \
     && python3 ../apps/manage.py makemigrations common users perms navis likes \
     && bash make_migrations.sh \
     && cd ../apps/ \
-    && python manage.py loaddata fixtures/init.json \
+    && python manage.py loaddata fixtures/init.json
 RUN chmod +x dt
 #CMD ["bash"]
 #CMD ["tail", "-f", "/dev/null"]
