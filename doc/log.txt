@@ -139,3 +139,27 @@ select * from users_user_groups;
 
 select * from users_usergroup;
 0||f3c6b02159a943e7b022c2e9bfac84d7|Default|Default user group|2017-12-12 08:13:20.906000|System
+
+ldap-admin-fe | 2022-04-22 19:19:37 [exception ERROR] Internal Server Error: /api/users/v1/users/ldap/
+ldap-admin-fe | Traceback (most recent call last):
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+ldap-admin-fe |     response = get_response(request)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+ldap-admin-fe |     response = self.process_exception_by_middleware(e, request)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+ldap-admin-fe |     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/contextlib.py", line 52, in inner
+ldap-admin-fe |     return func(*args, **kwds)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+ldap-admin-fe |     return view_func(*args, **kwargs)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+ldap-admin-fe |     return self.dispatch(request, *args, **kwargs)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 489, in dispatch
+ldap-admin-fe |     response = self.handle_exception(exc)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 449, in handle_exception
+ldap-admin-fe |     self.raise_uncaught_exception(exc)
+ldap-admin-fe |   File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 486, in dispatch
+ldap-admin-fe |     response = handler(request, *args, **kwargs)
+ldap-admin-fe |   File "/ldap-admin/apps/users/api.py", line 116, in get
+ldap-admin-fe |     ok = conn.search(search_ou, search_filter % ({"user": "*"}),
+ldap-admin-fe | TypeError: unsupported operand type(s) for %: 'NoneType' and 'dict'
