@@ -20,6 +20,10 @@ cd ..
 
 sudo docker run -it -d -p 8072:8080 --name ldap-admin yiluxiangbei/ldap-admin:v1
 sudo docker logs -f ldap-admin
+sudo docker exec -it ldap-admin bash
+
+/ldap-admin/logs/
+/ldap-admin/data
 
 http://49.232.6.131:8072/
 http://49.232.6.131:8072/users/login
