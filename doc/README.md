@@ -18,6 +18,8 @@ python manage.py loaddata fixtures/init.json
 cd ..
 ./dt start
 
+sudo docker run -it -d yiluxiangbei/ldap-admin:v1
+
 sudo docker push yiluxiangbei/ldap-admin:v1
 
 docker rmi `docker images | grep none | awk '{print $3}'`
