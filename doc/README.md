@@ -43,6 +43,8 @@ sudo docker-compose stop ldap-admin
 
 sudo docker exec -it ldap-admin-fe bash
 
+sudo docker-compose logs -f
+
 sqlite3 ldap/data/db.sqlite3
 
 sudo docker push yiluxiangbei/ldap-admin:v1
