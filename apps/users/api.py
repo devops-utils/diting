@@ -137,6 +137,7 @@ class LDAPUserListAPI(APIView):
                 user['isImported'] = False
                 # print("没有导入ldap_local:%s"%local_user)
             users.append(user)
+            user['phone'] = ''
         return Response(data=users, status=200)
 
 
