@@ -1,9 +1,9 @@
 FROM python:3.6
-RUN cp /ect/apt/sources.list /ect/apt/sources.list.bak
-RUN echo "">/ect/apt/sources.list
-RUN echo "deb http://ftp2.cn.debian.org/debian/ buster main">>/ect/apt/sources.list
-RUN echo "deb http://ftp2.cn.debian.org/debian/debian-security buster/updates main">>/ect/apt/sources.list
-RUN echo "deb http://ftp2.cn.debian.org/debian/debian buster-updates main">>/ect/apt/sources.list
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
+RUN echo "">/etc/apt/sources.list
+RUN echo "deb http://ftp2.cn.debian.org/debian/ buster main">>/etc/apt/sources.list
+RUN echo "deb http://ftp2.cn.debian.org/debian/debian-security buster/updates main">>/etc/apt/sources.list
+RUN echo "deb http://ftp2.cn.debian.org/debian/debian buster-updates main">>/etc/apt/sources.list
 RUN apt-get update
 # RUN sudo apt-get install aptitude -y
 # RUN sudo aptitude install python-dev -y
