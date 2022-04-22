@@ -14,5 +14,6 @@ RUN echo 'Asia/Shanghai' > /etc/timezone
 WORKDIR /ldap-admin
 COPY . .
 RUN pip3 install -r requirements/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+RUN pip3 install chardet -i https://pypi.tuna.tsinghua.edu.cn/simple/
 #CMD ["bash"]
 CMD ["tail", "-f", "/dev/null"]

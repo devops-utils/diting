@@ -4,11 +4,19 @@ sudo systemctl restart redis
 redis-cli
 
 sudo yum install python3-devel
+pip3 install chardet -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 sudo docker run -it --rm python:3.6 bash
 
 sudo docker build -t yiluxiangbei/ldap-admin:v1 . 
 sudo docker run -it yiluxiangbei/ldap-admin:v1 bash
+cd utils
+python3 ../apps/manage.py makemigrations common users perms navis likes
+bash make_migrations.sh
+cd ../apps/
+python manage.py loaddata fixtures/init.json
+cd ..
+./dt start
 
 sudo docker push yiluxiangbei/ldap-admin:v1
 
