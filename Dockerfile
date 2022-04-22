@@ -1,18 +1,6 @@
 FROM python:3.6
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
-RUN echo '' > /etc/apt/sources.list
-RUN cat <<EOF > /etc/apt/sources.list \
-deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse \
-deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse \
-deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse \
-deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse \
-deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse \
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse \
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse \
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse \
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse \
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse \
-EOF
+COPY doc/sources.list /etc/apt/sources.list
 RUN apt-get update
 # RUN sudo apt-get install aptitude -y
 # RUN sudo aptitude install python-dev -y
