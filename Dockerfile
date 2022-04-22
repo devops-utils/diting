@@ -23,4 +23,4 @@ RUN cd utils \
 RUN chmod +x dt
 #CMD ["bash"]
 #CMD ["tail", "-f", "/dev/null"]
-ENTRYPOINT ["/ldap-admin/dt start"]
+ENTRYPOINT ["/ldap-admin/dt", "start"]
