@@ -38,6 +38,8 @@ cd docker
 sudo docker-compose up
 sudo docker-compose up -d
 
+sudo docker-compose build ldap-admin
+
 sudo docker-compose up ldap-admin
 sudo docker-compose up -d ldap-admin
 sudo docker-compose stop ldap-admin
