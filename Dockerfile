@@ -15,11 +15,11 @@ WORKDIR /ldap-admin
 COPY . .
 RUN pip3 install -r requirements/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 RUN pip3 install chardet -i https://pypi.tuna.tsinghua.edu.cn/simple/
-RUN cd utils && python3 ../apps/manage.py makemigrations common users perms navis likes
-RUN pwd
-RUN bash make_migrations.sh
-RUN cd ../apps/
-RUN python manage.py loaddata fixtures/init.json
+RUN cd utils \
+    && python3 ../apps/manage.py makemigrations common users perms navis likes \
+    && bash make_migrations.sh \
+    && cd ../apps/ \
+    && python manage.py loaddata fixtures/init.json
 #CMD ["bash"]
 #CMD ["tail", "-f", "/dev/null"]
 ENTRYPOINT ["/ldap-admin/dt start"]
