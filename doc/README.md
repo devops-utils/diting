@@ -19,6 +19,8 @@ cd ..
 ./dt start
 
 sudo docker run -it -d -p 8072:8080 --name ldap-admin yiluxiangbei/ldap-admin:v1
+sudo docker logs -f ldap-admin
+
 sudo docker stop ldap-admin
 sudo docker rm ldap-admin
 
