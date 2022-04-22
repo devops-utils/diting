@@ -7,4 +7,5 @@ django.db
 celerybeat.pid
 /data/db.sqlite3
 docker/*
-doc/*
+doc/*.md
+doc/*.txt
