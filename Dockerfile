@@ -6,7 +6,9 @@ RUN apt-get update
 # RUN sudo aptitude install python-dev -y
 RUN apt-get install python3-dev -y
 RUN apt-get install systemd -y
-RUN apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk python-dev openssl libssl-dev libldap2-dev libsasl2-dev sqlite gcc automake -y
+RUN apt-get install libtiff5-dev zlib1g-dev libfreetype6-dev \
+    liblcms2-dev libwebp-dev python-tk python-dev \
+    openssl libssl-dev libldap2-dev libsasl2-dev sqlite gcc automake -y
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' > /etc/timezone
 WORKDIR /ldap-admin
