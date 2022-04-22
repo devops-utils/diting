@@ -1,6 +1,8 @@
 FROM python:3.6
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 COPY doc/sources.list /etc/apt/sources.list
+RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 RUN apt-get update
 # RUN sudo apt-get install aptitude -y
 # RUN sudo aptitude install python-dev -y
